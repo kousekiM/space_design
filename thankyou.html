@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>thankyou</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/utb4fgs.css" />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- JS読み込み -->
+    <script src="./js/script.js"></script>
+  </head>
+  <body bgcolor="5E6181">
+  
+    <div class="thankyou-top"><h4>thank you!</h4>
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'ubc4cyr',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+    <h4>arigato!</h4>
+    </div>
+    <button type="button" onclick="location.href='./index.html'" class="button">HOME</button>
+    <footer>
+      <div class="footer-container">
+        <picture>
+          <source srcset="./img/footer-bf-sp.png" media="(max-width: 767px)" />
+          <img src="./img/footer.png" alt="Footer" />
+        </picture>
+        <ul class="footer-nav">
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li><a href="./works.html">WORKS</a></li>
+          <li><a href="./contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </footer>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPACE DESIGN</title>
+    <link rel="stylesheet" href="https://use.typekit.net/utb4fgs.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- slickのCSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      .workspace-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- slickのJavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- JS読み込み -->
+    <script src="./js/script.js"></script>
+  </head>
+  <body bgcolor="#DFDFE6">
+    <script>
+      $(document).ready(function () {
+        // sessionStorageをチェックしてローディング表示の必要があるか判断
+        if (!sessionStorage.getItem("isLoaded")) {
+          // ローディング画面を表示
+          $("#loading").show();
+
+          // ページの全コンテンツがロードされた後にローディング画面を非表示にする
+          $(window).on("load", function () {
+            setTimeout(function () {
+              $("#loading").fadeOut("slow", function () {
+                $(this).hide(); // fadeOut後に完全に非表示にする
+                // ローディングが完了したことをsessionStorageに保存
+                sessionStorage.setItem("isLoaded", "true");
+              });
+            }, 3000); // ここでの1000ms（1秒）は追加で待機する時間です。
+          });
+        } else {
+          // ローディング画面は非表示に保つ
+          $("#loading").hide();
+        }
+      });
+      $(window).on("load", function () {
+        AOS.refresh();
+      });
+    </script>
+    <!-- ローディング -->
+    <div id="loading">
+      <div class="content">
+        <div class="planet">
+          <div class="ring"></div>
+          <div class="cover-ring"></div>
+          <div class="spots">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <p>loading</p>
+      </div>
+    </div>
+    <header id="header">
+      <nav class="pc_nav">
+        <ul>
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li><a href="./works.html">WORKS</a></li>
+          <li><a href="./contact.html">CONTACT</a></li>
+          <li>
+            <a
+              href="https://www.instagram.com/_____mng_____design?igsh=MTVidGJ3b21teTh2Zg%3D%3D&utm_source=qr"
+              ><img
+                src="./img/Instagram_Glyph_Black.png"
+                width="13px"
+                height="13px"
+                alt="Instagram"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sp_menu_btn"><span></span></div>
+      <nav class="sp_nav">
+        <ul>
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li><a href="./works.html">WORKS</a></li>
+          <li><a href="./contact.html">CONTACT</a></li>
+          <li>
+            <a
+              href="https://www.instagram.com/_____mng_____design?igsh=MTVidGJ3b21teTh2Zg%3D%3D&utm_source=qr"
+              ><img
+                src="./img/Instagram_Glyph_Black.png"
+                width="13px"
+                height="13px"
+                alt="Instagram"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+      <h1 data-aos="fade-up" data-aos-duration="2000">
+        <img src="./img/spacedesign.png" alt="spacedesign" />
+      </h1>
+    </header>
+
+    <section class="about" data-aos="fade-up" data-aos-duration="2000">
+      <picture>
+        <source srcset="./img/sp-bg.png" media="(max-width: 767px)" />
+        <img src="./img/about.png" width="100%" height="auto" />
+      </picture>
+      <div class="text-overlay">
+        <h2>about</h2>
+        <p>
+          宇宙は広くて、人類に知られていない事が沢山あります。<br />
+          人類は宇宙のまだ5%程の事しか明かされていないです。<br />
+          <br class="sp-br" />
+          まだ発見されていない宇宙の事を探求してお客様のまだ見たこと無い<br
+            class="pc-br"
+          />
+          新しいデザインを一緒に探す旅に出かける事をイメージして<br
+            class="pc-br"
+          />
+          こちらのSPACE DESIGNのページを制作いたしました。
+        </p>
+        <a href="./about.html" class="btntextchange"
+          ><span>MORE</span><span>私について</span></a
+        >
+      </div>
+    </section>
+
+    <!-- works -->
+    <section
+      class="workspace-container"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
+      <h3>work</h3>
+      <img src="./img/workspace.png" width="100%" height="auto" />
+      <div class="slider">
+        <a href="./works/works01.html"><img src="./img/works01@2x.png" alt="" /></a>
+        <a href="./works/works02.html"><img src="./img/works02@2x.png" alt="" /></a>
+        <a href="./works/works03.html"><img src="./img/works03@2x.png" alt="" /></a>
+        <a href="./works/works04.html"><img src="./img/works04@2x.png" alt="" /></a>
+        <a href="./works/works05.html"><img src="./img/salon.hp.png" alt="" /></a>
+      </div>
+    </section>
+    <section class="contact">
+      <p>お問い合わせはこちらへ</p>
+      <div
+        class="image-container"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      ></div>
+      <div class="button-container">
+        <a href="./contact.html" class="my-parts"
+          >CONTACT<span class="btn-icon"></span
+        ></a>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <picture>
+          <source srcset="./img/footer-bf-sp.png" media="(max-width: 767px)" />
+          <img src="./img/footer.png" alt="Footer" />
+        </picture>
+        <ul class="footer-nav">
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li><a href="./works.html">WORKS</a></li>
+          <li><a href="./contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- Topへ戻るボタン -->
+    <a href="#header" class="example3">
+      <img
+        src="./img/toppage locket.png"
+        alt="Image Description"
+        class="top-page-icon"
+      />
+      <p class="pc">TOP PAGE</p>
+    </a>
+  </body>
+</html>
